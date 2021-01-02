@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <style name="button">
+        <item name="android:textColor">@color/blue_button</item>
+        <item name="android:textSize">20sp</item>
+        <item name="backgroundTint">#00000000</item>
+        <item name="backgroundTintMode">add</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:gravity">center</item>
+        <item name="android:stateListAnimator">@animator/button_state_list_anim_neumorph</item>
+        <item name="neumorph_inset">5dp</item>
+        <item name="neumorph_shadowElevation">5dp</item>
+        <item name="neumorph_shadowColorLight">@color/white</item>
+        <item name="neumorph_shadowColorDark">@color/dark_shadow</item>
+    </style>
+
+    <style name="white_button" parent="button">
+        <item name="neumorph_backgroundColor">@color/white_button</item>
+    </style>
+
+    <style name="blue_button" parent="button">
+        <item name="android:textColor">@color/white_button</item>
+        <item name="neumorph_backgroundColor">@color/blue_button</item>
+    </style>
+
+    <style name="white_button0" parent="button">
+        <item name="neumorph_backgroundColor">@color/white_button</item>
+    </style>
+
+    <style name="screen">
+        <item name="android:background">@drawable/background_screen</item>
+    </style>
+
+    <style name="app_name">
+        <item name="android:textStyle">normal|bold</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/project_name</item>
+        <item name="android:fontFamily">@font/museo</item>
+    </style>
+    <style name="input_panel">
+        <item name="android:fontFamily">@font/digital_numbers</item>
+    </style>
+
+    <style name="front_input_panel" parent="input_panel">
+        <item name="android:textColor">@color/project_name</item>
+    </style>
+
+    <style name="back_input_panel" parent="input_panel">
+        <item name="android:textColor">@color/input_panel</item>
+    </style>
+
+
+</resources>

@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calculator"
+        app:layout_constraintBottom_toTopOf="@+id/topBorderOfTheScreen"
+        app:layout_constraintEnd_toStartOf="@+id/rightBorderOfTheScreen"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/leftBorderOfTheScreen"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/screen"
+        style="@style/screen"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="4:1"
+        app:layout_constraintEnd_toStartOf="@+id/rightBorderOfTheScreen"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/leftBorderOfTheScreen"
+        app:layout_constraintTop_toTopOf="@+id/topBorderOfTheScreen" />
+
+    <TextView
+        android:id="@+id/backInputPanel"
+        style="@style/back_input_panel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/inputPanel"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/bottomBorderOfTheNumber"
+        app:layout_constraintEnd_toStartOf="@+id/rightBorderOfTheNumber"
+        app:layout_constraintHorizontal_bias="0.64"
+        app:layout_constraintStart_toStartOf="@+id/leftBorderOfTheNumber"
+        app:layout_constraintTop_toTopOf="@+id/topBorderOfTheNumber" />
+
+    <TextView
+        android:id="@+id/frontInputPanel"
+        style="@style/front_input_panel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="end"
+        android:text="@string/btn0"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/bottomBorderOfTheFrontInputPanel"
+        app:layout_constraintEnd_toStartOf="@+id/rightBorderOfTheFrontInputPanel"
+        app:layout_constraintStart_toStartOf="@+id/screen"
+        app:layout_constraintTop_toTopOf="@+id/topBorderOfTheFrontInputPanel" />
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/btnEqually"
+        style="@style/blue_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/Equally"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/btnComma"
+        app:layout_constraintTop_toBottomOf="@+id/btnPlus" />
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/btnComma"
+        style="@style/white_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/Comma"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/btnEqually"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/btn0"
+        app:layout_constraintTop_toBottomOf="@+id/btn3" />
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/btnDiv"
+        style="@style/blue_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/Div"
+        app:layout_constraintBottom_toTopOf="@+id/btnMult"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnPercent"
+        app:layout_constraintTop_toBottomOf="@+id/screen" />
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/btn4"
+        style="@style/white_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/btn4"
+        app:layout_constraintBottom_toTopOf="@+id/btn1"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/btn5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn7" />
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/btnAC"
+        style="@style/white_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/AC"
+        app:layout_constraintBottom_toTopOf="@+id/btn7"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/btnPlusMinus"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/screen" />
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/btn2"
+        style="@style/white_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/btn2"
+        app:layout_constraintBottom_toTopOf="@+id/btn0"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/btn3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn1"
+        app:layout_constraintTop_toBottomOf="@+id/btn5" />
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/btn5"
+        style="@style/white_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/btn5"
+        app:layout_constraintBottom_toTopOf="@+id/btn2"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/btn6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn4"
+        app:layout_constraintTop_toBottomOf="@+id/btn8" />
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/btn8"
+        style="@style/white_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/btn8"
+        app:layout_constraintBottom_toTopOf="@+id/btn5"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/btn9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn7"
+        app:layout_constraintTop_toBottomOf="@+id/btnPlusMinus" />
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/btn6"
+        style="@style/white_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/btn6"
+        app:layout_constraintBottom_toTopOf="@+id/btn3"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/btnMinus"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn5"
+        app:layout_constraintTop_toBottomOf="@+id/btn9" />
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/btn0"
+        style="@style/white_button0"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/btn0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="2:1"
+        app:layout_constraintEnd_toStartOf="@+id/btnComma"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn1" />
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/btn7"
+        style="@style/white_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/btn7"
+        app:layout_constraintBottom_toTopOf="@+id/btn4"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/btn8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAC" />
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/btn1"
+        style="@style/white_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/btn1"
+        app:layout_constraintBottom_toTopOf="@+id/btn0"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/btn2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn4" />
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/btnMult"
+        style="@style/blue_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/Mult"
+        app:layout_constraintBottom_toTopOf="@+id/btnMinus"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn9"
+        app:layout_constraintTop_toBottomOf="@+id/btnDiv" />
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/btnPlus"
+        style="@style/blue_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/Plus"
+        app:layout_constraintBottom_toTopOf="@+id/btnEqually"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn3"
+        app:layout_constraintTop_toBottomOf="@+id/btnMinus" />
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/btn9"
+        style="@style/white_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/btn9"
+        app:layout_constraintBottom_toTopOf="@+id/btn6"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/btnMult"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn8"
+        app:layout_constraintTop_toBottomOf="@+id/btnPercent" />
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/btnPercent"
+        style="@style/white_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/Percent"
+        app:layout_constraintBottom_toTopOf="@+id/btn9"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/btnDiv"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnPlusMinus"
+        app:layout_constraintTop_toBottomOf="@+id/screen" />
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/btn3"
+        style="@style/white_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/btn3"
+        app:layout_constraintBottom_toTopOf="@+id/btnComma"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/btnPlus"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn2"
+        app:layout_constraintTop_toBottomOf="@+id/btn6" />
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/btnMinus"
+        style="@style/blue_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/Minus"
+        app:layout_constraintBottom_toTopOf="@+id/btnPlus"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn6"
+        app:layout_constraintTop_toBottomOf="@+id/btnMult" />
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/btnPlusMinus"
+        style="@style/white_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/PlusMinus"
+        app:layout_constraintBottom_toTopOf="@+id/btn8"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/btnPercent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnAC"
+        app:layout_constraintTop_toBottomOf="@+id/screen" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftBorderOfTheScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.04" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rightBorderOfTheScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topBorderOfTheScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.11" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftBorderOfTheNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.09" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rightBorderOfTheNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.91" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topBorderOfTheNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.13953489" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomBorderOfTheNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.22024624" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rightBorderOfTheFrontInputPanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topBorderOfTheFrontInputPanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.14227086" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomBorderOfTheFrontInputPanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20930232" />
+
+    <TextView
+        android:id="@+id/counterIQ"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/iq_100"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/topBorderOfTheScreen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.cdev.achievementview.AchievementView
+        android:id="@+id/achievement2"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/achievement1"
+        app:layout_constraintVertical_bias="0.0"
+        custom:colorLeft="@color/black"
+        custom:colorRight="@color/black"
+        custom:drawableLeft="@drawable/iq"
+        custom:rightPartWidth="170dp"
+        custom:textSizeFirstLine="4sp"
+        custom:textSizeSecondLine="4sp" />
+
+    <com.cdev.achievementview.AchievementView
+        android:id="@+id/achievement1"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        custom:colorLeft="@color/black"
+        custom:colorRight="@color/black"
+        custom:drawableLeft="@drawable/durachok"
+        custom:rightPartWidth="170dp"
+        custom:textSizeFirstLine="4sp"
+        custom:textSizeSecondLine="4sp" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn0,btnComma" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_operation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="btnDiv,btnMult,btnMinus,btnPlus" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,3 @@
+include ':achievementview'
+include ':app'
+rootProject.name = "MyCalc"
